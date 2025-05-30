@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politica de cookie-uri - SIM Logistics Limited</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Sora', sans-serif;
+      color: white;
+      background-color: #000;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 3vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+      border-bottom: 1px solid white;
+    }
+    .navbar.scrolled {
+  background-color: rgba(0, 0, 0, 1);
+}
+    .navbar h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+           .navbar nav {
+      display: flex;
+      align-items: center;
+    }
+    .navbar nav a {
+      margin-left: 2rem;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .navbar nav a.active {
+      color: #e4f754;
+    }
+    .lang-select {
+      margin-left: 2rem;
+    }
+    .lang-select select {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.7rem;
+    }
+        .mobile-nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.95);
+      position: fixed;
+      top: 58px;
+      left: 0;
+      width: 100vw;
+      padding: 1.5rem 5vw 2rem;
+      gap: 1.2rem;
+      z-index: 9;
+    }
+    .mobile-nav.show {
+      display: flex !important;
+    }
+    .mobile-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .mobile-nav select {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 8px;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: auto;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 3rem 5vw;
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      flex-wrap: wrap;
+      gap: 5vw;
+      border-top: 1px solid white;
+    }
+    .footer-section {
+      max-width: 400px;
+    }
+    .footer-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .footer-section p,
+    .footer-section a {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer-section.legal a {
+      text-align: left;
+      display: block;
+    }
+    .footer-section.legal a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+          html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      }
+      .navbar nav { display: none; }
+      .menu-toggle { display: flex; }
+      .navbar { padding: 1rem 1rem; }
+      .navbar h1 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+ <header class="navbar">
+    <h1>SIM Logistics Limited</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="acasa_ro.html">Acasă</a>
+      <a href="despre_ro.html">Despre noi</a>
+      <a href="servicii_ro.html">Servicii</a>
+      <a href="contact_ro.html" class="active">Contact</a>
+      <span class="lang-select">
+        <select onchange="location = this.value">
+          <option value="index.html" selected>RO</option>
+          <option value="en.html">EN</option>
+        </select>
+      </span>
+    </nav>
+  </header>
+  <div class="mobile-nav">
+    <a href="acasa_ro.html">Acasă</a>
+    <a href="despre_ro.html">Despre noi</a>
+    <a href="servicii_ro.html">Servicii</a>
+    <a href="contact_ro.html" class="active">Contact</a>
+    <select onchange="location = this.value">
+      <option value="index.html" selected>RO</option>
+      <option value="en.html">EN</option>
+    </select>
+  </div>
+<main style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; padding: 8rem 5vw; gap: 3rem; max-width: 1300px; margin: 0 auto; color: white;">
+  <div style="flex: 1 1 30%; min-width: 280px;">
+    <h1 style="font-size: 2rem; font-weight: 700; line-height: 1.3; text-transform: uppercase;">Politica de<br>cookie-uri</h1>
+  </div>
+  <div style="flex: 1 1 65%; min-width: 300px; font-size: 1rem; line-height: 1.8; text-align: left;">
+    <p><strong>1. Ce sunt cookie-urile?</strong></p>
+    <p>Cookie-urile sunt fișiere mici care sunt stocate pe dispozitivul tău atunci când vizitezi un site web. Aceste fișiere sunt utilizate pentru a îmbunătăți experiența utilizatorului, prin reținerea preferințelor și setărilor tale, precum și pentru a oferi informații utile pentru îmbunătățirea serviciilor oferite de site.</p><br>
+
+    <p><strong>2. Ce tipuri de cookie-uri folosim?</strong></p>
+    <p>Pe acest site, utilizăm următoarele tipuri de cookie-uri:</p>
+    <ul>
+      <li style="margin-left: 3rem;"><strong>Cookie-uri esențiale:</strong> Aceste cookie-uri sunt necesare pentru funcționarea corectă a site-ului. Fără aceste cookie-uri, anumite funcționalități ale site-ului nu ar putea funcționa.</li>
+      <li style="margin-left: 3rem;"><strong>Cookie-uri de performanță:</strong> Aceste cookie-uri colectează informații despre cum vizitatorii utilizează site-ul, inclusiv paginile cele mai vizitate și dacă au întâmpinat erori. Aceste informații sunt anonime și sunt utilizate pentru a îmbunătăți performanța site-ului.</li>
+      <li style="margin-left: 3rem;"><strong>Cookie-uri de funcționalitate:</strong> Aceste cookie-uri permit site-ului să își amintească preferințele tale (de exemplu, limba selectată sau regiunea) și să îți ofere o experiență personalizată.</li>
+      <li style="margin-left: 3rem;"><strong>Cookie-uri de publicitate și marketing:</strong> Aceste cookie-uri sunt folosite pentru a urmări vizitatorii pe diferite site-uri și pentru a construi un profil al intereselor acestora. Aceste informații sunt utilizate pentru a oferi reclame relevante.</li>
+    </ul><br>
+
+    <p><strong>3. Cum poți controla cookie-urile?</strong></p>
+    <p>Ai posibilitatea de a gestiona setările de cookie-uri prin intermediul browser-ului tău. Poți accepta toate cookie-urile, refuza anumite tipuri de cookie-uri sau șterge cookie-urile deja stocate pe dispozitivul tău. Reține că refuzarea cookie-urilor poate afecta anumite funcționalități ale site-ului.</p>
+    <p>Iată cum poți modifica setările cookie-urilor în funcție de browser-ul utilizat:</p>
+    <ul>
+      <li style="margin-left: 3rem;"><strong>Google Chrome:</strong> Mergi la „Setări” > „Confidențialitate și securitate” > „Cookie-uri și alte date ale site-urilor”.</li>
+      <li style="margin-left: 3rem;"><strong>Mozilla Firefox:</strong> Mergi la „Opțiuni” > „Confidențialitate și securitate” > „Cookie-uri și datele site-urilor”.</li>
+      <li style="margin-left: 3rem;"><strong>Safari:</strong> Mergi la „Preferințe” > „Confidențialitate” > „Gestionare cookie-uri”.</li>
+      <li style="margin-left: 3rem;"><strong>Microsoft Edge:</strong> Mergi la „Setări” > „Confidențialitate, căutare și servicii” > „Cookie-uri”.</li>
+    </ul><br>
+
+    <p><strong>4. De ce utilizăm cookie-uri?</strong></p>
+    <p>Folosim cookie-uri pentru a îmbunătăți experiența utilizatorilor, pentru a analiza modul în care interacționează cu site-ul și pentru a personaliza conținutul și publicitatea. Cookie-urile ne ajută să îți oferim un site mai rapid și mai relevant, precum și să îmbunătățim funcționalitatea acestuia.</p><br>
+
+    <p><strong>5. Ce se întâmplă dacă nu accepți cookie-urile?</strong></p>
+    <p>Dacă refuzi utilizarea cookie-urilor, este posibil ca anumite funcționalități ale site-ului nostru să nu fie disponibile sau să nu funcționeze corect. De asemenea, anumite servicii personalizate pot să nu fie disponibile.</p><br>
+
+    <p><strong>6. Modificări ale Politicii de Cookie-uri</strong></p>
+    <p>Această politică poate fi actualizată periodic. Vă recomandăm să verificați această pagină frecvent pentru a fi la curent cu orice modificări. Modificările vor fi vizibile pe această pagină, iar data ultimei actualizări va fi menționată la finalul documentului.</p><br>
+
+    <p><strong>7. Contact</strong></p>
+    <p>Pentru orice întrebări referitoare la Politica de Cookie-uri sau la utilizarea cookie-urilor pe acest site, vă rugăm să ne contactați la:</p>
+    <ul>
+      <li style="margin-left: 3rem;"><strong>E-mail:</strong> <a href="mailto:office@simlogistics.eu" style="color:#e4f754; text-decoration: none;">office@simlogistics.eu</a></li>
+      <li style="margin-left: 3rem;"><strong>Adresă:</strong> Mun. Botosani, Calea Nationala nr. 144, Centrul de Microproductie al Incubatorului de Afaceri U1-B6, U1-B7, U1-B8, jud. Botosani, cod postal: 710370</li>
+    </ul><br>
+
+    <p>Data ultimei actualizări: [introduceți data]</p>
+  </div>
+</main>
+
+  <footer>
+    <div class="footer-section address">
+      <h2 style="font-size: 1.8rem; text-align: center;">SIM Logistics Limited</h2>
+      <p>Mun. Botoșani, Calea Natională nr. 144, Centrul de Microproducție al Incubatorului de Afaceri U1-B6, U1-B7, U1-B8, jud. Botoșani, cod poștal: 710370</p>
+      <p>C.U.I. RO 44778595, COD CAEN 8292</p>
+      <p>Registrul Comerțului J7/624/2021</p>
+    </div>
+    <div class="footer-section legal">
+      <h2>Informații legale</h2>
+        <a href="politica_confidentialitate_ro.html">POLITICA DE CONFIDENȚIALITATE</a>
+        <a href="politica_cookie_ro.html">POLITICA DE COOKIE-URI</a>
+        <a href="termeni_si_conditii_ro.html">TERMENI ȘI CONDIȚII</a>
+      <p class="copyright">Toate drepturile rezervate SIM Logistics Limited</p>
+    </div>
+  </footer>
+  <script>
+  // Toggle meniu hamburger mobil
+  function toggleMenu() {
+  const mobileNav = document.querySelector('.mobile-nav');
+  mobileNav.classList.toggle('show');
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
+</body>
+</html>
