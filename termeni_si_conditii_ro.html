@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termeni si condiții - SIM Logistics Limited</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Sora', sans-serif;
+      color: white;
+      background-color: #000;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 3vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+      border-bottom: 1px solid white;
+    }
+    .navbar.scrolled {
+  background-color: rgba(0, 0, 0, 1);
+}
+    .navbar h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+           .navbar nav {
+      display: flex;
+      align-items: center;
+    }
+    .navbar nav a {
+      margin-left: 2rem;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .navbar nav a.active {
+      color: #e4f754;
+    }
+    .lang-select {
+      margin-left: 2rem;
+    }
+    .lang-select select {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.7rem;
+    }
+        .mobile-nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.95);
+      position: fixed;
+      top: 58px;
+      left: 0;
+      width: 100vw;
+      padding: 1.5rem 5vw 2rem;
+      gap: 1.2rem;
+      z-index: 9;
+    }
+    .mobile-nav.show {
+      display: flex !important;
+    }
+    .mobile-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .mobile-nav select {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 8px;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: auto;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 3rem 5vw;
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      flex-wrap: wrap;
+      gap: 5vw;
+      border-top: 1px solid white;
+    }
+    .footer-section {
+      max-width: 400px;
+    }
+    .footer-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .footer-section p,
+    .footer-section a {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer-section.legal a {
+      text-align: left;
+      display: block;
+    }
+    .footer-section.legal a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+          html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      }
+      .navbar nav { display: none; }
+      .menu-toggle { display: flex; }
+      .navbar { padding: 1rem 1rem; }
+      .navbar h1 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+ <header class="navbar">
+    <h1>SIM Logistics Limited</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="acasa_ro.html">Acasă</a>
+      <a href="despre_ro.html">Despre noi</a>
+      <a href="servicii_ro.html">Servicii</a>
+      <a href="contact_ro.html" class="active">Contact</a>
+      <span class="lang-select">
+        <select onchange="location = this.value">
+          <option value="index.html" selected>RO</option>
+          <option value="en.html">EN</option>
+        </select>
+      </span>
+    </nav>
+  </header>
+  <div class="mobile-nav">
+    <a href="acasa_ro.html">Acasă</a>
+    <a href="despre_ro.html">Despre noi</a>
+    <a href="servicii_ro.html">Servicii</a>
+    <a href="contact_ro.html" class="active">Contact</a>
+    <select onchange="location = this.value">
+      <option value="index.html" selected>RO</option>
+      <option value="en.html">EN</option>
+    </select>
+  </div>
+<main style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; padding: 8rem 5vw; gap: 3rem; max-width: 1300px; margin: 0 auto; color: white;">
+  <div style="flex: 1 1 30%; min-width: 280px;">
+    <h1 style="font-size: 2rem; font-weight: 700; line-height: 1.3; text-transform: uppercase;">Termeni și<br>Condiții</h1>
+  </div>
+  <div style="flex: 1 1 65%; min-width: 300px; font-size: 1rem; line-height: 1.8; text-align: left;">
+    <p><strong>1. Introducere</strong></p>
+    <p>Acești Termeni și Condiții reglementează utilizarea site-ului nostru, disponibil la [introduceți adresa site-ului]. Accesând sau utilizând acest site, sunteți de acord cu acești Termeni și Condiții. Dacă nu sunteți de acord cu aceștia, nu trebuie să utilizați acest site.</p><br>
+
+    <p><strong>2. Drepturi de proprietate intelectuală</strong></p>
+    <p>Tot conținutul disponibil pe site-ul nostru, inclusiv, dar fără a se limita la, texte, imagini, logo-uri, grafice și software, este protejat prin drepturi de autor și alte legi de proprietate intelectuală. Nu aveți dreptul să copiați, distribuiți, modificați sau să utilizați materialele de pe acest site fără permisiunea noastră scrisă.</p><br>
+
+    <p><strong>3. Utilizarea site-ului</strong></p>
+    <p>Acest site este destinat pentru prezentarea serviciilor noastre. Sunteți responsabil de orice activitate desfășurată pe site, inclusiv, dar fără a se limita la, trimiterea de informații prin formularele de contact. Nu trebuie să folosiți site-ul pentru a încălca legi aplicabile sau pentru a transmite informații abuzive, defăimătoare sau ilegale.</p><br>
+
+    <p><strong>4. Limitarea responsabilității</strong></p>
+    <p>În ciuda eforturilor noastre de a menține site-ul actualizat și funcțional, nu garantăm că informațiile de pe acest site sunt exacte, complete sau fără erori. Utilizați site-ul pe propriul risc și nu suntem responsabili pentru daunele directe, indirecte sau de alt tip care ar putea rezulta din utilizarea acestuia.</p><br>
+
+    <p><strong>5. Politica de confidențialitate și cookie-uri</strong></p>
+    <p>Prin utilizarea site-ului nostru, sunteți de acord cu Politica noastră de Confidențialitate și Politica de Cookie-uri, disponibile pe site.</p><br>
+
+    <p><strong>6. Modificări ale termenilor și condițiilor</strong></p>
+    <p>Ne rezervăm dreptul de a modifica acești Termeni și Condiții în orice moment, fără notificare prealabilă. Vă recomandăm să consultați periodic această secțiune pentru a fi la curent cu eventualele modificări.</p><br>
+
+    <p><strong>7. Legislația aplicabilă</strong></p>
+    <p>Acești Termeni și Condiții vor fi guvernați de și interpretați conform legislației din România. Orice dispută care ar putea apărea va fi soluționată de instanțele competente din România.</p><br>
+
+    <p><strong>8. Contact</strong></p>
+    <p>Pentru orice întrebări legate de acești Termeni și Condiții, ne puteți contacta la:</p>
+    <ul>
+      <li style="margin-left: 3rem;"><strong>E-mail:</strong> <a href="mailto:office@simlogistics.eu" style="color:#e4f754; text-decoration: none;">office@simlogistics.eu</a></li>
+      <li style="margin-left: 3rem;"><strong>Adresă:</strong> Mun. Botoșani, Calea Nationala nr. 144, Centrul de Microproductie al Incubatorului de Afaceri U1-B6, U1-B7, U1-B8, jud. Botoșani, cod postal: 710370</li>
+    </ul><br>
+
+    <p>Data ultimei actualizări: [introduceți data]</p>
+  </div>
+</main>
+
+  <footer>
+    <div class="footer-section address">
+      <h2 style="font-size: 1.8rem; text-align: center;">SIM Logistics Limited</h2>
+      <p>Mun. Botoșani, Calea Natională nr. 144, Centrul de Microproducție al Incubatorului de Afaceri U1-B6, U1-B7, U1-B8, jud. Botoșani, cod poștal: 710370</p>
+      <p>C.U.I. RO 44778595, COD CAEN 8292</p>
+      <p>Registrul Comerțului J7/624/2021</p>
+    </div>
+    <div class="footer-section legal">
+      <h2>Informații legale</h2>
+        <a href="politica_confidentialitate_ro.html">POLITICA DE CONFIDENȚIALITATE</a>
+        <a href="politica_cookie_ro.html">POLITICA DE COOKIE-URI</a>
+        <a href="termeni_si_conditii_ro.html">TERMENI ȘI CONDIȚII</a>
+      <p class="copyright">Toate drepturile rezervate SIM Logistics Limited</p>
+    </div>
+  </footer>
+  <script>
+  // Toggle meniu hamburger mobil
+  function toggleMenu() {
+  const mobileNav = document.querySelector('.mobile-nav');
+  mobileNav.classList.toggle('show');
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
+</body>
+</html>
