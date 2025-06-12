@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politica de confidențialitate - SIM Logistics Limited</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Sora', sans-serif;
+      color: white;
+      background-color: #000;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 3vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+      border-bottom: 1px solid white;
+    }
+    .navbar.scrolled {
+  background-color: rgba(0, 0, 0, 1);
+}
+    .navbar h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+           .navbar nav {
+      display: flex;
+      align-items: center;
+    }
+    .navbar nav a {
+      margin-left: 2rem;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .navbar nav a.active {
+      color: #e4f754;
+    }
+    .lang-select {
+      margin-left: 2rem;
+    }
+    .lang-select select {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.7rem;
+    }
+        .mobile-nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.95);
+      position: fixed;
+      top: 58px;
+      left: 0;
+      width: 100vw;
+      padding: 1.5rem 5vw 2rem;
+      gap: 1.2rem;
+      z-index: 9;
+    }
+    .mobile-nav.show {
+      display: flex !important;
+    }
+    .mobile-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .mobile-nav select {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      border-radius: 8px;
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      margin-left: auto;
+    }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 3rem 5vw;
+      display: flex;
+      justify-content: center;
+      text-align: left;
+      flex-wrap: wrap;
+      gap: 5vw;
+      border-top: 1px solid white;
+    }
+    .footer-section {
+      max-width: 400px;
+    }
+    .footer-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .footer-section p,
+    .footer-section a {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer-section.legal a {
+      text-align: left;
+      display: block;
+    }
+    .footer-section.legal a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+          html, body {
+      width: 100%;
+      max-width: 100vw;
+      overflow-x: hidden;
+      }
+      .navbar nav { display: none; }
+      .menu-toggle { display: flex; }
+      .navbar { padding: 1rem 1rem; }
+      .navbar h1 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+ <header class="navbar">
+    <h1>SIM Logistics Limited</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="acasa.html">Acasă</a>
+      <a href="despre.html">Despre noi</a>
+      <a href="servicii.html">Servicii</a>
+      <a href="contact.html" class="active">Contact</a>
+      <span class="lang-select">
+        <select onchange="location = this.value">
+          <option value="index.html" selected>RO</option>
+          <option value="en.html">EN</option>
+        </select>
+      </span>
+    </nav>
+  </header>
+  <div class="mobile-nav">
+    <a href="acasa.html">Acasă</a>
+    <a href="despre.html">Despre noi</a>
+    <a href="servicii.html">Servicii</a>
+    <a href="contact.html" class="active">Contact</a>
+    <select onchange="location = this.value">
+      <option value="index.html" selected>RO</option>
+      <option value="en.html">EN</option>
+    </select>
+  </div>
+<main style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; padding: 8rem 5vw; gap: 3rem; max-width: 1300px; margin: 0 auto; color: white;">
+  <div style="flex: 1 1 30%; min-width: 280px;">
+    <h1 style="font-size: 2rem; font-weight: 700; line-height: 1.3; text-transform: uppercase;">Politica de<br>confidențialitate</h1>
+  </div>
+  <div style="flex: 1 1 65%; min-width: 300px; font-size: 1rem; line-height: 1.8; text-align: left;">
+    <p><strong>1. Introducere</strong></p>
+    <p>Această Politică de confidențialitate descrie modul în care SIM Logistics Limited colectează, utilizează și protejează datele personale ale vizitatorilor site-ului nostru [introduceți adresa site-ului]. Ne angajăm să protejăm confidențialitatea datelor dumneavoastră, conform Regulamentului General privind Protecția Datelor (GDPR - UE 2016/679).</p>
+<br>
+    <p><strong>2. Ce date colectăm?</strong></p>
+    <p>Putem colecta următoarele tipuri de date personale:</p>
+    <ul>
+      <li style="margin-left: 3rem;">Nume și prenume</li>
+      <li style="margin-left: 3rem;">Adresă de e-mail</li>
+      <li style="margin-left: 3rem;">Număr de telefon</li>
+      <li style="margin-left: 3rem;">Orice alte informații pe care le furnizați voluntar prin formularele de contact de pe site</li>
+      <li style="margin-left: 3rem;">Informații despre utilizarea site-ului prin cookie-uri</li>
+    </ul>
+<br>
+    <p><strong>3. Cum colectăm datele?</strong></p>
+    <p>Datele sunt colectate prin:</p>
+    <ul>
+       <li style="margin-left: 3rem;">Formularul de contact</li>
+       <li style="margin-left: 3rem;">Cookie-uri și tehnologii similare</li>
+       <li style="margin-left: 3rem;">Interacțiunea directă cu site-ul nostru</li>
+    </ul>
+<br>
+    <p><strong>4. Scopul colectării datelor</strong></p>
+    <p>Utilizăm datele colectate pentru:</p>
+    <ul>
+       <li style="margin-left: 3rem;">A răspunde solicitărilor transmise prin formularul de contact</li>
+       <li style="margin-left: 3rem;">Înțelegeri comerciale și comunicare cu clienții</li>
+       <li style="margin-left: 3rem;">Îmbunătățirea experienței utilizatorilor pe site</li>
+       <li style="margin-left: 3rem;">Conformitatea cu obligațiile legale</li>
+    </ul>
+<br>
+    <p><strong>5. Cum protejăm datele dumneavoastră?</strong></p>
+    <p>Luăm toate măsurile necesare pentru protecția datelor personale, inclusiv:</p>
+    <ul>
+       <li style="margin-left: 3rem;">Măsuri tehnice și organizatorice pentru protejarea datelor</li>
+       <li style="margin-left: 3rem;">Restricționarea accesului la date doar personalului autorizat</li>
+       <li style="margin-left: 3rem;">Protejarea site-ului prin protocoale de securitate SSL</li>
+    </ul>
+<br>
+    <p><strong>6. Partajarea datelor cu terți</strong></p>
+    <p>Nu vindem, nu distribuim și nu oferim acces terțelor părți la datele dumneavoastră personale, cu excepția cazurilor în care acest lucru este necesar pentru furnizarea serviciilor noastre sau dacă avem o obligație legală.</p>
+    <p>Putem partaja datele cu:</p>
+    <ul>
+       <li style="margin-left: 3rem;">Furnizori de servicii IT pentru menținerea și securitatea site-ului</li>
+       <li style="margin-left: 3rem;">Autorități publice, dacă ni se solicită legal</li>
+    </ul>
+<br>
+    <p><strong>7. Drepturile dumneavoastră</strong></p>
+    <p>Conform GDPR, aveți următoarele drepturi:</p>
+    <ul>
+       <li style="margin-left: 3rem;">Dreptul de acces la datele dumneavoastră personale</li>
+       <li style="margin-left: 3rem;">Dreptul de rectificare a datelor incorecte</li>
+       <li style="margin-left: 3rem;">Dreptul de ștergere a datelor („dreptul de a fi uitat”)</li>
+       <li style="margin-left: 3rem;">Dreptul de a restricționa prelucrarea datelor</li>
+       <li style="margin-left: 3rem;">Dreptul la portabilitatea datelor</li>
+       <li style="margin-left: 3rem;">Dreptul de opoziție la prelucrarea datelor</li>
+       <li style="margin-left: 3rem;">Dreptul de a depune o plângere la ANSPDCP</li>
+    </ul>
+    <p>Pentru exercitarea acestor drepturi, ne puteți contacta la <a href="mailto:office@simlogistics.eu" style="color:#e4f754; text-decoration: none;">office@simlogistics.eu</a></p>
+<br>
+    <p><strong>8. Politica de cookie-uri</strong></p>
+    <p>Site-ul nostru utilizează cookie-uri pentru a îmbunătăți experiența utilizatorilor. Pentru mai multe detalii, vă rugăm să consultați Politica noastră de cookie-uri.</p>
+<br>
+    <p><strong>9. Modificări ale politicii de confidențialitate</strong></p>
+    <p>Această politică poate fi actualizată periodic. Vă recomandăm să verificați periodic această pagină pentru a fi la curent cu eventualele modificări.</p>
+<br>
+    <p><strong>10. Contact</strong></p>
+    <p>Pentru orice întrebări legate de această Politică de confidențialitate, ne puteți contacta la:</p>
+    <ul>
+       <li style="margin-left: 3rem;"><strong>E-mail:</strong> office@simlogistics.eu</li>
+       <li style="margin-left: 3rem;"><strong>Adresă:</strong> Mun. Botoșani, Calea Națională nr. 144, Centrul de Microproducție al Incubatorului de Afaceri U1-B6, U1-B7, U1-B8, jud. Botoșani, cod poștal: 710370</li>
+    </ul>
+<br>
+    <p>Această Politică de confidențialitate este în vigoare începând cu data de [introduceți data publicării].</p>
+  </div>
+</main>
+
+  <footer>
+    <div class="footer-section address">
+      <h2 style="font-size: 1.8rem; text-align: center;">SIM Logistics Limited</h2>
+      <p>Mun. Botoșani, Calea Natională nr. 144, Centrul de Microproducție al Incubatorului de Afaceri U1-B6, U1-B7, U1-B8, jud. Botoșani, cod poștal: 710370</p>
+      <p>C.U.I. RO 44778595, COD CAEN 8292</p>
+      <p>Registrul Comerțului J7/624/2021</p>
+    </div>
+    <div class="footer-section legal">
+      <h2>Informații legale</h2>
+        <a href="politica_confidentialitate.html">POLITICA DE CONFIDENȚIALITATE</a>
+        <a href="politica_cookie.html">POLITICA DE COOKIE-URI</a>
+        <a href="termeni_si_conditii.html">TERMENI ȘI CONDIȚII</a>
+      <p class="copyright">Toate drepturile rezervate SIM Logistics Limited</p>
+    </div>
+  </footer>
+  <script>
+  // Toggle meniu hamburger mobil
+  function toggleMenu() {
+  const mobileNav = document.querySelector('.mobile-nav');
+  mobileNav.classList.toggle('show');
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  });
+</script>
+</body>
+</html>
